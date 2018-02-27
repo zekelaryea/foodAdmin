@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="https://www.getpapercss.com/assets/paper.css">
+<h1> ADD MENU</h1>
+<div class="dv-notify-success alert alert-success">menu added successfully</div>
+<div class="dv-notify alert alert-warning">Thanks for registering</div>
+<div class="dv-notify-failed alert alert-danger">Sorry your menu could not be added</div>
+
+<form class="dv-add-oneto:registration:menu">
+<input type="file" name="image" placeholder="please attach image">
+
+<input type="text" name="description" placeholder="please enter a description">
+<input type="text" name="price" placeholder="please enter price of food item">
+<input type="hidden" name="users_id" value="1" >
+<input type="hidden" name="registration_vendor_id" value="0" >
+
+<button type="submit"> Add Menu </button>
+
+
+<br>
+<br>
+<a href="/registration" class = "paper-btn"> Back </a>
+
+	</form>
+
+	<script src="http://kori123.herokuapp.com/js/devless-sdk.js" class="devless-connection" devless-con-token="7652eb1ff815652bf2ef0b15b15a7b03"  ></script>
+
+	<script>
+         document.getElementsByName("registration_vendor_id")[0].value = localStorage.getItem("registration_vendor_id");
+	</script>

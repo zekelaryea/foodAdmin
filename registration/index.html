@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="https://www.getpapercss.com/assets/paper.css">
+
+
+
+<h1> Registration Page</h1>
+<div class="dv-notify-success alert alert-success">Thanks for registering</div>
+<div class="dv-notify alert alert-warning">Thanks for registering</div>
+<div class="dv-notify-failed alert alert-danger">Sorry your account could not be created</div>
+<div></div>
+
+<form class="dv-add-oneto:registration:vendor">
+
+<input type="text" name="name" placeholder="please enter name">
+<input type="text" name="address" placeholder="please enter address">
+<input type="email" name="email" placeholder="please enter email">
+<input type="text" name="contact" placeholder="please enter contact">
+<input type="file" name="cert" placeholder="please attach certificate">
+<input type="hidden" name="users_id" value="1" >
+<button type="submit"> Register </button>
+<a href="/addMenu" class = "paper-btn"> Add Menu </a>
+
+
+	</form>
+
+	<script src="http://kori123.herokuapp.com/js/devless-sdk.js" class="devless-connection" devless-con-token="7652eb1ff815652bf2ef0b15b15a7b03"  ></script>
+
+	<script >
+
+		dvOnResponse(function(resp) {
+			if(resp.status_code == 609) {
+
+				localStorage.setItem("registration_vendor_id", resp.payload.entry_id);
+			}
+
+		})
+
+	</script>
